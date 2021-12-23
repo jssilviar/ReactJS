@@ -1,3 +1,6 @@
+import { ItemCount} from './ItemCount'
+
 export function ItemListContainer (){
-    return null
+
+    return <ItemCount stock={15} initial={1}/>
 }
