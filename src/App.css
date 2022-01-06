@@ -45,3 +45,8 @@
   border-radius: 5px;
   border-color: black;
 }
+
+.item {
+  height: 100px;
+  width: 100px;
+}

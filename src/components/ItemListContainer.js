@@ -8,7 +8,7 @@ const productCakePromise = new Promise ((resolve, reject) => {
             id: '01',
             name: 'Keke de Graduación',
             description: 'keke de 3 niveles vainilla, chocolate, chocochip',
-            stock: 10
+            stock: 20
         },{
             id: '02',
             name: 'Keke de Baby Shower',
