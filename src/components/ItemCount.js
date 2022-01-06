@@ -9,9 +9,9 @@ export function ItemCount( stock , initial , onAdd){
                 validarStock()`)
     }
 
-    const validarStock =() => {
-        return stock >= count
-    }
+    // const validarStock =() => {
+    //     return stock >= count
+    // }
 
     return (
         <div className="flex">

@@ -1,6 +1,15 @@
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,12 +28,20 @@
   font-size: calc(10px + 2vmin);
 }
 
+.cards{
+  display: flex;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  margin: 10px solid;
+  border-color: darkkhaki;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bottonComprar{
+  border-radius: 5px;
+  border-color: black;
 }

@@ -37,7 +37,6 @@ export default function NavBar() {
                     <CartWidget numItems={ 3} />
                 </div>
             </nav> 
-            <ItemListContainer/>
         </div>
     )
 }
