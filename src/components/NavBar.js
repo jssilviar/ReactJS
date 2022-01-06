@@ -34,7 +34,7 @@ export default function NavBar() {
                             </li>
                         </ul>
                     </div>
-                    <CartWidget numItems={ 3} />
+                    <CartWidget numItems={ 0 } />
                 </div>
             </nav> 
         </div>
