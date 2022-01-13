@@ -50,3 +50,41 @@
   height: 100px;
   width: 100px;
 }
+
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.img-rounded {
+  border-radius: 50px;
+}
+
+.caracteristica{
+  text-decoration: underline;
+}
+
+.bg-principal {
+  background-color: #eee4b3;
+}
+
+.bg-2 {
+  background-color:#bdb76b
+}
+
+a, .nav-link{
+  color: black;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

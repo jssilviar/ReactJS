@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mobiliario Blanco",
+        "imagen": "../public/1.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Cómoda, circulares 3 medidas: 80cm, 60cm y 40cm.Ideal para eventos de bautizos, cumpleaños.",
+        "precio": 220.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 2,
+        "nombre": "Pallet Rústico",
+        "imagen": "../public/2.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Pallet rústico de rayas horizontales. Medida: 200 x 250cm. Mesas rectangulares 2 medidas + 2 jarrones. ",
+        "precio": 250.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 3,
+        "nombre": "Escalera",
+        "imagen": "../public/3.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Escalera 3 niveles rústico (color marrón), ideal para sospresas o recuerdos.",
+        "precio": 150.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 4,
+        "nombre": "Circulares",
+        "imagen": "../public/4.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Mobiliarios de 3 medidas: 120cm, 100cm y 80cm.",
+        "precio": 200.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 5,
+        "nombre": "Mobiliario Dorado",
+        "imagen": "../public/5.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "2 copas, 3 fuentes, 1 porta-torta y canasta.",
+        "precio": 100.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 6,
+        "nombre": "Mobiliario Pallet",
+        "imagen": "../public/6.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "3 cilindros rusticos de medida: 120cm, 100cm y 80cm + mesita +silla.",
+        "precio": 230.00,
+        "categoria": "backingPallet"
+    },
+    {
+        "id": 7,
+        "nombre": "Bautizo",
+        "imagen": "../public/7.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
+        "precio": 250.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 8,
+        "nombre": "Torta Frozen",
+        "imagen": "../public/8.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
+        "precio": 250.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 9,
+        "nombre": "Minecraft",
+        "imagen": "../public/9.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
+        "precio": 180.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 10,
+        "nombre": "Baby Shower",
+        "imagen": "../public/10.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
+        "precio": 230.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 11,
+        "nombre": "Matrimonio",
+        "imagen": "../public/11.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, o especial de medidas #18, #20, #24, #26, #30 forrado con fontdant, chantilly o masa elástica.Decorado al gusto..",
+        "precio": 350.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 12,
+        "nombre": "Graduación",
+        "imagen": "../public/12.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
+        "precio": 210.00,
+        "categoria": "cakes"
+    },
+    {
+        "id": 13,
+        "nombre": "Chocomanzanas",
+        "imagen": "../public/13.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete x6 unidades,bañadas en caramelo, chocolate o forradas con fontdant personalizados.",
+        "precio": 30.00,
+        "categoria": "catering"
+    },
+    {
+        "id": 14,
+        "nombre": "Alfajores",
+        "imagen": "../public/14.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete x6 unidades, relleno de manjar blanco y cubierto por masa elástica o azúcar impalpable.",
+        "precio": 45.00,
+        "categoria": "catering"
+    },
+    {
+        "id": 15,
+        "nombre": "Cup Cakes",
+        "imagen": "../public/15.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete desde 6 unidades, masa de vainilla, chocolate o chocochip. Personalizados.",
+        "precio": 60.00,
+        "categoria": "catering"
+    },
+    {
+        "id": 16,
+        "nombre": "Galletas Sr. Papa",
+        "imagen": "../public/16.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete x6 unidades,vainilla, chocolate o chocochip, de la forma que quieras y adornados con masa elástica o manjar.",
+        "precio": 30.00,
+        "categoria": "catering"
+    },
+    {
+        "id": 17,
+        "nombre": "Galletas",
+        "imagen": "../public/17.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete x6 unidades, hechas de harina o maizena, personalizados.",
+        "precio": 25.00,
+        "categoria": "catering"
+    },
+    {
+        "id": 18,
+        "nombre": "Brownies",
+        "imagen": "../public/18.png",
+        "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
+        "stock":20,
+        "desc": "Paquete x6 unidades, personalizados.",
+        "precio": 30.00,
+        "categoria": "catering"
+    }
+]
