@@ -1,5 +1,6 @@
 import React from 'react'
 import {productImages} from '../helpers/productImages'
+import { ItemCount } from './ItemCount'
 
 export default function ItemDetail({product}) {
 
@@ -35,6 +36,20 @@ export default function ItemDetail({product}) {
                         Delivery
                     </label>
                 </div>
+                <h4>Opciones de pago</h4>
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label className="form-check-label" >
+                        Efectivo
+                    </label>
+                </div>
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
+                    <label className="form-check-label" >
+                        Tarjetas crédito/débito
+                    </label>
+                </div>
+                <ItemCount stock={product.stock} initial={1}/>
             </div>
         </div>
     )
