@@ -6,29 +6,28 @@ import Loading from './Loading';
 const getProductById = async (id) => {
     const productPromise = new Promise( (resolve, reject) => {
         setTimeout(() => {
-            const product = Products.find( item => item.id === id);
+            const product = Products.find( item => item.id === Number(id));
             resolve(product);
-        }, 2000)
+        }, 1000)
     });
 
     const data = await productPromise;
-
     return data;
 }
 
 
-export default function ItemDetailContainer() {
+export default function ItemDetailContainer({productId}) {
     
-    const [item, setItem] = useState();
+    const [product, setProduct] = useState();
 
     useEffect(() => {
-        getProductById(8)
-            .then( product => setItem(product) )
-    }, [])
+        getProductById(productId)
+            .then( product => setProduct(product) )
+    }, [productId])
 
     return (
         <div className='container'>
-            {item ? <ItemDetail product={item}/>: <Loading/>}
+            {product ? <ItemDetail product={product}/>: <Loading/>}
         </div>
     )
 }

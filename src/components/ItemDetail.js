@@ -23,15 +23,15 @@ export default function ItemDetail({product}) {
                     <option>24</option>
                 </select>
                 <h4>Opciones</h4>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <label class="form-check-label" for="flexRadioDefault1">
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label className="form-check-label" >
                         Recojo
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
-                    <label class="form-check-label" for="flexRadioDefault2">
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
+                    <label className="form-check-label" >
                         Delivery
                     </label>
                 </div>

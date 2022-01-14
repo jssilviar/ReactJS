@@ -1,16 +1,33 @@
 import './App.css';
 import NavBar from './components/NavBar'
 import { ItemListContainer} from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Cakes from './pages/Cakes';
+import Catering from './pages/Catering';
+import BackingPallet from './pages/BackingPallet';
+import Ubicanos from './pages/Ubicanos';
+import Contactanos from './pages/Contactanos';
+import Cart from './pages/Cart';
+import ProductDetailPage from './components/ProductDetailPage';
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar/>
-      {/* <ItemListContainer/> */}
-      <ItemDetailContainer/>
-    </>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/cakes" component={Cakes} />
+        <Route path="/catering" component={Catering} />
+        <Route path="/baking-pallet" component={BackingPallet} />
+        <Route path="/ubicanos" component={Ubicanos} />
+        <Route path="/contactanos" component={Contactanos} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/products" component={ItemListContainer} />
+        <Route path="/product/:id" component={ProductDetailPage} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
