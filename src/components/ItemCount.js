@@ -41,7 +41,7 @@ export function ItemCount({stock , initial = 1}){
                 disabled={!maxStock()}
                 > + </button>
             </div>
-            <button className="bg-warning" onClick={onAdd} disabled={!validarStock()}
+            <button className="btn btn-warning" onClick={onAdd} disabled={!validarStock()}
             >Agregar al carrito</button>
         </>
     )
