@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {productImages} from '../helpers/productImages'
 import Cart from '../pages/Cart'
 import { ItemCount } from './ItemCount'
@@ -51,7 +52,9 @@ export default function ItemDetail({product}) {
                     </label>
                 </div>
                 <ItemCount stock={product.stock} initial={1}/>
-                <button className="btn btn-warning" onClick={(event)=> {return (Cart)}}>Terminar Compra</button>
+                <Link to="../pages/Cart"><button className="btn btn-warning">Terminar Compra</button>
+                </Link>
+                {/* onClick={(event)=> {return (Cart)}} */}
             </div>
         </div>
     )
