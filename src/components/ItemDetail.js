@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {productImages} from '../helpers/productImages'
-import Cart from '../pages/Cart'
 import { ItemCount } from './ItemCount'
 
 export default function ItemDetail({product}) {
 
     return (
         <div className='row'>
-            <img className="img-rounded col-4" src={productImages(`./${product.id}.png`).default} alt={product.nombre}/>
-            <div className='col-8'>
+            <img className="img-rounded col-sm-4" src={productImages(`./${product.id}.png`).default} alt={product.nombre}/>
+            <div className='col-sm-8'>
                 <h1>{product.nombre}</h1>
                 <h3 className='caracteristica'>Características:</h3>
                 <h4>Modelo:</h4>
@@ -52,9 +51,9 @@ export default function ItemDetail({product}) {
                     </label>
                 </div>
                 <ItemCount stock={product.stock} initial={1}/>
-                <Link to="../pages/Cart"><button className="btn btn-warning">Terminar Compra</button>
+                <Link to="/cart">
+                    <button className="btn btn-warning">Terminar Compra</button>
                 </Link>
-                {/* onClick={(event)=> {return (Cart)}} */}
             </div>
         </div>
     )

@@ -64,7 +64,7 @@
         "nombre": "Bautizo",
         "imagen": "../public/7.png",
         "modelo": "Torta de cumpleaños infantil, temática: Frozen - OLAF",
-        "stock":20,
+        "stock": 20,
         "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
         "precio": 250.00,
         "categoria": "cakes"
