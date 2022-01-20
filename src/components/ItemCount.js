@@ -1,7 +1,8 @@
 import {useState} from 'react'
 
 //las props se reciben como propiedades de un objeto {}, asi pueden pasarse dentro del hook 'useState'
-export function ItemCount({stock , initial = 1}){
+export function ItemCount({stock, initial = 1}){
+
     const [count, setCount] = useState(initial);
 
     const validarStock =() => {

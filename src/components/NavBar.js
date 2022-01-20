@@ -5,11 +5,11 @@ import { CartWidget } from './CartWidget'
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-2">
-            <div className="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-2 sticky-top">
+            <div class="container-fluid">
                 <NavLink className="navbar-brand" to="/">Lady Di Cakes</NavLink>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
@@ -28,11 +28,11 @@ export default function NavBar() {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/ubicanos">Ubícanos</NavLink>
                         </li>
+                        <NavLink to="/cart">
+                            <CartWidget numItems={ 0 } />
+                        </NavLink>
                     </ul>
                 </div>
-                <NavLink to="/cart">
-                    <CartWidget numItems={ 0 } />
-                </NavLink>
             </div>
         </nav>
     )
