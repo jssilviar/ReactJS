@@ -23,24 +23,19 @@ export function ItemCount({stock, initial, onAdd}){
         return count >= 2;
     }
 
+    function handlePrevCount() {
+        setCount(prevCount => prevCount - 1)
+    }
+
+    function handlePrevCount2() {
+        setCount(prevCount => prevCount + 1)
+    }
     return (
         <>
             <div>
-                <button className="rounded px-4 py-2" onClick={()=>{
-                    setCount((prevCount) =>{
-                        return prevCount -1
-                    })
-                }}
-                disabled={!minStock()}
-                > - </button>
+                <button className="rounded px-4 py-2" onClick={handlePrevCount} disabled={!minStock()}> - </button>
                 <span className="px-4 text-2xl">{count}</span>
-                <button className="rounded px-4 py-2" onClick={()=>{
-                    setCount((prevCount) =>{
-                        return prevCount +1
-                    })
-                }}
-                disabled={!maxStock()}
-                > + </button>
+                <button className="rounded px-4 py-2" onClick={handlePrevCount2} disabled={!maxStock()}> + </button>
             </div>
             <button className="btn btn-warning" onClick={onAdd} disabled={!validarStock()}
             >Agregar al carrito</button>
