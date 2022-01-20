@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { CartContext } from '../contexts/cartContext'
 import { CartWidget } from './CartWidget'
 
 
 export default function NavBar() {
+
+    const {cartItems} = useContext(CartContext) 
+
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-2 sticky-top">
             <div class="container-fluid">
@@ -29,7 +33,7 @@ export default function NavBar() {
                             <NavLink className="nav-link" to="/ubicanos">Ubícanos</NavLink>
                         </li>
                         <NavLink to="/cart">
-                            <CartWidget numItems={ 0 } />
+                            <CartWidget numItems={ cartItems.length } />
                         </NavLink>
                     </ul>
                 </div>
