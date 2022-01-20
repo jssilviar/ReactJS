@@ -3,9 +3,6 @@ import NavBar from './components/NavBar'
 import { ItemListContainer} from './components/ItemListContainer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import Cakes from './pages/Cakes';
-import Catering from './pages/Catering';
-import BackingPallet from './pages/BackingPallet';
 import Ubicanos from './pages/Ubicanos';
 import Contactanos from './pages/Contactanos';
 import Cart from './pages/Cart';
@@ -18,9 +15,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/cakes" component={Cakes} />
-        <Route path="/catering" component={Catering} />
-        <Route path="/baking-pallet" component={BackingPallet} />
+        <Route path="/category/:category" component={Home}/>
         <Route path="/ubicanos" component={Ubicanos} />
         <Route path="/contactanos" component={Contactanos} />
         <Route path="/cart" component={Cart} />

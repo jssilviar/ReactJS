@@ -14,13 +14,13 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/baking-pallet">Backing Pallet</NavLink>
+                            <NavLink className="nav-link" to="/category/backingPallet">Backing Pallet</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/catering">Catering</NavLink>
+                            <NavLink className="nav-link" to="/category/catering">Catering</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/cakes">Cakes</NavLink>
+                            <NavLink className="nav-link" to="/category/cakes">Cakes</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/contactanos">Contáctanos</NavLink>

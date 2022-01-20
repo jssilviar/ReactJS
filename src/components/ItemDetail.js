@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {productImages} from '../helpers/productImages'
-import Cart from '../pages/Cart'
 import { ItemCount } from './ItemCount'
 
 export default function ItemDetail({product}) {
