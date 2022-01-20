@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 //las props se reciben como propiedades de un objeto {}, asi pueden pasarse dentro del hook 'useState'
-export function ItemCount({stock, initial = 1}){
+export function ItemCount({stock, initial, onAdd}){
 
     const [count, setCount] = useState(initial);
 
@@ -13,11 +13,11 @@ export function ItemCount({stock, initial = 1}){
         return stock > count
     }
 
-    function onAdd () {
+    /* function onAdd () {
         (count === 1)
             ? alert(`¡Genial! Añadiste ${count} unidad a tu carrito.`)
             : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);
-    }
+    } */
     
     function minStock () {
         return count >= 2;

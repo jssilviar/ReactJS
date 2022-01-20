@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {productImages} from '../helpers/productImages'
 import { ItemCount } from './ItemCount'
 
 export default function ItemDetail({product}) {
+
+    const [count] = useState();
+
+    function onAdd () {
+        (count === 1)
+            ? alert(`¡Genial! Añadiste ${count} unidad a tu carrito.`)
+            : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);
+    }
 
     return (
         <div className='row'>
@@ -50,7 +58,7 @@ export default function ItemDetail({product}) {
                         Tarjetas crédito/débito
                     </label>
                 </div>
-                <ItemCount stock={product.stock} initial={1}/>
+                <ItemCount onAdd={onAdd} initial={1} stock={product.stock} />
                 <Link to="/cart">
                     <button className="btn btn-warning">Terminar Compra</button>
                 </Link>
