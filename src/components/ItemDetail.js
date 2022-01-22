@@ -5,14 +5,12 @@ import { ItemCount } from './ItemCount'
 
 export default function ItemDetail({product}) {
 
-    function onAdd (setCount) {
-        
-       /* (count === 1)
+    
+    function onAdd (count) {
+        return (count === 1)
             ? alert(`¡Genial! Añadiste ${count} unidad a tu carrito.`)
-            : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);  */
+            : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);
     }
-
-
 
     return (
         <div className='row'>

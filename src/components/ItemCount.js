@@ -12,12 +12,6 @@ export function ItemCount({stock, initial, onAdd}){
     const maxStock =() => {
         return stock > count
     }
-
-    /* function onAdd () {
-        (count === 1)
-            ? alert(`¡Genial! Añadiste ${count} unidad a tu carrito.`)
-            : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);
-    } */
     
     function minStock () {
         return count >= 2;
@@ -27,7 +21,7 @@ export function ItemCount({stock, initial, onAdd}){
         setCount(prevCount => prevCount - 1)
     }
 
-    function handlePrevCount2() {
+    function handleAdding() {
         setCount(prevCount => prevCount + 1)
     }
     return (
@@ -35,9 +29,9 @@ export function ItemCount({stock, initial, onAdd}){
             <div>
                 <button className="rounded px-4 py-2" onClick={handlePrevCount} disabled={!minStock()}> - </button>
                 <span className="px-4 text-2xl">{count}</span>
-                <button className="rounded px-4 py-2" onClick={handlePrevCount2} disabled={!maxStock()}> + </button>
+                <button className="rounded px-4 py-2" onClick={handleAdding} disabled={!maxStock()}> + </button>
             </div>
-            <button className="btn btn-warning" onClick={onAdd} disabled={!validarStock()}
+            <button className="btn btn-warning" onClick={() => onAdd(count)} disabled={!validarStock()}
             >Agregar al carrito</button>
         </>
     )
