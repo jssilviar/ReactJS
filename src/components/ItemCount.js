@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 //las props se reciben como propiedades de un objeto {}, asi pueden pasarse dentro del hook 'useState'
-export function ItemCount({stock, initial, onAdd}){
+export function ItemCount({stock, initial = 1, onAdd}){
 
     const [count, setCount] = useState(initial);
 
@@ -32,7 +32,7 @@ export function ItemCount({stock, initial, onAdd}){
                 <button className="rounded px-4 py-2" onClick={handleAdding} disabled={!maxStock()}> + </button>
             </div>
             <button className="btn btn-warning" onClick={() => onAdd(count)} disabled={!validarStock()}
-            >Agregar al carrito</button>
+            > Añadir al carrito </button>
         </>
     )
 

@@ -1,15 +1,15 @@
-//import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import {productImages} from '../helpers/productImages'
-import { ItemCount } from './ItemCount'
+import { productImages } from '../helpers/productImages';
+import { useCart } from '../hooks/userCart';
+import { ItemCount } from './ItemCount';
 
 export default function ItemDetail({product}) {
 
-    
+    const carrito = useCart();
+
+    const carItem = carrito.getItem(product.id);
+
     function onAdd (count) {
-        return (count === 1)
-            ? alert(`¡Genial! Añadiste ${count} unidad a tu carrito.`)
-            : alert(`¡Genial! Añadiste ${count} unidades a tu carrito.`);
+        return carrito.addItem({...product, count})
     }
 
     return (
@@ -46,22 +46,24 @@ export default function ItemDetail({product}) {
                 </div>
                 <h4>Opciones de pago</h4>
                 <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <input className="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" />
                     <label className="form-check-label" >
                         Efectivo
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
+                    <input className="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" defaultChecked />
                     <label className="form-check-label" >
                         Tarjetas crédito/débito
                     </label>
                 </div>
-                <ItemCount onAdd={onAdd} initial={1} stock={product.stock}  />
-                <Link to="/cart">
-                    <button className="btn btn-warning">Terminar Compra</button>
-                </Link>
+                <ItemCount
+                    onAdd={onAdd}
+                    initial={carItem?.count}
+                    stock={product.stock}
+                />
             </div>
         </div>
     )
+
 }

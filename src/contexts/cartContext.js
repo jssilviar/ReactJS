@@ -1,7 +1,6 @@
 import {createContext} from "react"
+import ItemDetail from "../components/ItemDetail";
 
 export const CartContext = createContext({
-    cartItems: [],
-    numero: 6,
-    otra: "no se"
+    addItem: [ItemDetail, console.log(typeof"addToItem")] ,
 });

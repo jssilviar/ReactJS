@@ -7,28 +7,12 @@ import Ubicanos from './pages/Ubicanos';
 import Contactanos from './pages/Contactanos';
 import Cart from './pages/Cart';
 import ProductDetailPage from './components/ProductDetailPage';
-import { CartContext } from './contexts/cartContext';
+import { CartProvider } from './providers/CartProvider';
 
 
 function App() {
-
-const contextValue = {
-  cartItems: [
-    {
-        "id": 1,
-        "nombre": "torta"
-    },
-    {
-        "id": 2,
-        "nombre": "torta de chocolate"
-    }
-  ],
-}
-
-
-
   return (
-    <CartContext.Provider value={contextValue}>
+    <CartProvider>
       <BrowserRouter>
         <NavBar/>
         <Switch>
@@ -41,7 +25,7 @@ const contextValue = {
           <Route path="/product/:id" component={ProductDetailPage} />
         </Switch>
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 
