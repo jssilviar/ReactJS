@@ -14,7 +14,7 @@ export default function NavBar() {
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/category/backingPallet">Backing Pallet</NavLink>
                         </li>

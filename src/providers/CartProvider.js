@@ -27,7 +27,14 @@ export function CartProvider({children}) {
                 return itemsClonados;
 
             })
-        }
+        },
+        get total() {
+            return itemsCarrito.reduce(
+              (r, item) => r + item.count * item.precio,
+              0
+            )
+          }
+
     }
 
     return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
