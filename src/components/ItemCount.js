@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Swal from 'sweetalert2'
 
 //las props se reciben como propiedades de un objeto {}, asi pueden pasarse dentro del hook 'useState'
 export function ItemCount({stock, initial = 1, onAdd}){
@@ -24,6 +25,17 @@ export function ItemCount({stock, initial = 1, onAdd}){
     function handleAdding() {
         setCount(prevCount => prevCount + 1)
     }
+    function sweetAlert() {
+        onAdd(count)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se añadió el producto a tu bolsa.',
+            showConfirmButton: false,
+            timer: 2000
+            })
+    }
+
     return (
         <>
             <div>
@@ -31,7 +43,7 @@ export function ItemCount({stock, initial = 1, onAdd}){
                 <span className="px-4 text-2xl">{count}</span>
                 <button className="rounded px-4 py-2" onClick={handleAdding} disabled={!maxStock()}> + </button>
             </div>
-            <button className="btn btn-warning" onClick={() => onAdd(count)} disabled={!validarStock()}
+            <button className="btn btn-warning" onClick={sweetAlert} disabled={!validarStock()}
             > Añadir al carrito </button>
         </>
     )
