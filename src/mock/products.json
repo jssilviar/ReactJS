@@ -43,7 +43,7 @@
         "id": 5,
         "nombre": "Mobiliario Dorado",
         "imagen": "../public/5.png",
-        "modelo": " 2 copones largos + 4 bandejas + 1 carruaje",
+        "modelo": "2 copones largos + 4 bandejas + 1 carruaje",
         "stock":5,
         "desc": "2 copas de 60cm cada una, 4 bandejas (3 fuentes y 1 puede ser utilizado de porta-torta) y carruaje para algo pequeño y no muy pesado.",
         "precio": 100.00,
@@ -105,7 +105,7 @@
         "imagen": "../public/11.png",
         "modelo": "Torta de matrimonio + decoración de rosas",
         "stock":20,
-        "desc": "3 niveles de Keke de vainilla, chocolate o chocochip, o especial de medidas #18, #20, #24, #26, #30 forrado con fontdant, chantilly o masa elástica.Decorado al gusto..",
+        "desc": "3 niveles de Keke de vainilla, chocolate o chocochip, o especial de medidas #18, #20, #24, #26, #30 forrado con fontdant, chantilly o masa elástica.Decorado al gusto.",
         "precio": 350.00,
         "categoria": "cakes"
     },

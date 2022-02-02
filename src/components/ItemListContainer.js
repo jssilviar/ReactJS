@@ -1,43 +1,66 @@
 import { useEffect, useState} from 'react'
 import { ItemList} from './ItemList'
-import Products from '../mock/products.json'
+//import Products from '../mock/products.json'
 import Loading from './Loading';
+import { getAllProducts } from '../firebase';
 
-const getCakesByCategory = async (category) => {
-    const productCakePromise = new Promise ((resolve, reject) => {
-        setTimeout(() =>{
-            const cakes = Products.filter( item => item.categoria === category);
-            resolve(cakes)
-        }, 1000)
-    });
-
-    const data = await productCakePromise;
-    return data;
+function getProducts() {
+    return getAllProducts();
 }
 
-const getCakes = async () => {
-    const productCakePromise = new Promise ((resolve, reject) => {
-        setTimeout(() =>{
-            const cakes = Products;
-            resolve(cakes)
-        }, 1000)
-    });
 
-    const data = await productCakePromise;
-    return data;
-}
-export function ItemListContainer ({category}){
-    const [productCake, setProducts] = useState([])
 
-    useEffect( () => {
-        category === undefined
-        ? getCakes().then(cakes =>setProducts(cakes))
-        : getCakesByCategory(category).then(cakes =>setProducts(cakes))
-    }, [category] )
+// const getCakesByCategory = async (category) => {
+//     const productCakePromise = new Promise ((resolve, reject) => {
+//         setTimeout(() =>{
+//             const cakes = Products.filter( item => item.categoria === category);
+//             resolve(cakes)
+//         }, 1000)
+//     });
 
-    return(
-        <div className="container">
-            {productCake ? <ItemList cakes={productCake}/> : <Loading/>}
-        </div>
-    )
+//     const data = await productCakePromise;
+//     return data;
+// }
+
+// const getCakes = async () => {
+//     const productCakePromise = new Promise ((resolve, reject) => {
+//         setTimeout(() =>{
+//             const cakes = Products;
+//             resolve(cakes)
+//         }, 1000)
+//     });
+
+//     const data = await productCakePromise;
+//     return data;
+// }
+
+export function ItemListContainer (){
+    const [productCake, setProducts] = useState([]);
+
+    useEffect(() => {
+        async function fn() {
+            try {
+                const productos = await getProducts();
+                setProducts(productos)
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fn();
+    }, []);
+    
+    return <div className='container'>
+        {productCake ? <ItemList cakes={productCake} /> : <Loading/> }
+    </div>
+    // useEffect( () => {
+    //     category === undefined
+    //     ? getCakes().then(cakes =>setProducts(cakes))
+    //     : getCakesByCategory(category).then(cakes =>setProducts(cakes))
+    // }, [category] )
+
+    // return(
+    //     <div className="container">
+    //         {productCake ? <ItemList cakes={productCake}/> : <Loading/>}
+    //     </div>
+    // )
 }
