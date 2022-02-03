@@ -9,7 +9,7 @@ function documentToProduct(document) {
 
 export async function getAllProducts() {
     const db = getFirestore();
-    const snapshot = await db.collection('products').get();
+    const snapshot = await db.collection('ladydicakes').get();
     const products = snapshot.docs.map(documentToProduct);
     return products;
 }

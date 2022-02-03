@@ -1,5 +1,3 @@
-import {productImages} from '../helpers/productImages';
-
 export function Item ({ productCake }){
     return(
     <div className='card' >
