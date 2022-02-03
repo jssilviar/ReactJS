@@ -1,1 +1,0 @@
-export const productImages = require.context('../img/products', true);

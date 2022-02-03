@@ -14,7 +14,7 @@ export default function CartList() {
             <h4>Detalle de la compra: </h4>
             {
                 items.map(itemCart => {
-                    return <CartItem key={itemCart.id} item={itemCart}/>
+                    return <CartItem  key={itemCart.id} item={itemCart}/>
                 })
             }
             </div>

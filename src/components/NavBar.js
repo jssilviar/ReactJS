@@ -7,11 +7,14 @@ export default function NavBar() {
     const carrito = useCart();
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-2 sticky-top">
-            <div class="container-fluid">
-                <NavLink className="navbar-brand" to="/">Lady Di Cakes</NavLink>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-light bg-2 sticky-top">
+            <div className="container-fluid">
+                <NavLink className="navbar-brand" to="/">
+                    <img src="../logoText.png" alt="logo" width="35" height="35" className="d-inline-block align-text-top me-2"/>
+                    Lady Di Cakes
+                </NavLink>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav ms-auto">

@@ -1,4 +1,3 @@
-import { productImages } from '../helpers/productImages';
 import { useCart } from '../hooks/userCart';
 import { ItemCount } from './ItemCount';
 
@@ -14,7 +13,7 @@ export default function ItemDetail({product}) {
 
     return (
         <div className='row'>
-            <img className="img-rounded col-sm-4" src={productImages(`./${product.id}.png`).default} alt={product.nombre}/>
+            <img className="img-rounded col-sm-4" src={product.imagen} alt={product.nombre}/>
             <div className='col-sm-8'>
                 <h1>{product.nombre}</h1>
                 <h3 className='caracteristica'>Características:</h3>

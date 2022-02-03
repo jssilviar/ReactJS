@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './components/NavBar'
-import { ItemListContainer} from './components/ItemListContainer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Ubicanos from './pages/Ubicanos';
@@ -21,7 +20,6 @@ function App() {
           <Route path="/ubicanos" component={Ubicanos} />
           <Route path="/contactanos" component={Contactanos} />
           <Route path="/cart" component={Cart} />
-          <Route path="/products" component={ItemListContainer} />
           <Route path="/product/:id" component={ProductDetailPage} />
         </Switch>
       </BrowserRouter>
