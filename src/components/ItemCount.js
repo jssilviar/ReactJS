@@ -39,7 +39,7 @@ export function ItemCount({stock, initial = 1, onAdd}){
 
     return (
         <>
-            <div>
+            <div className='mb-4'>
                 <button className="rounded px-4 py-2" onClick={handlePrevCount} disabled={!minStock()}> - </button>
                 <span className="px-4 text-2xl">{count}</span>
                 <button className="rounded px-4 py-2" onClick={handleAdding} disabled={!maxStock()}> + </button>

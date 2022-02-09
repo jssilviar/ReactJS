@@ -56,15 +56,15 @@ export default function Checkout({items}) {
       </h2>
       <h4>Unidades: {carrito.length}</h4>
       <form onSubmit={ handleSubmit(sendForm) }>
-        <div class="mb-3">
+        <div className="mb-3">
           <label for="exampleFormControlInput1" className="form-label">Nombre</label>
           <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Juan" required { ...register("name")}/>
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <label for="exampleFormControlInput2" className="form-label">Correo</label>
           <input type="email" className="form-control" id="exampleFormControlInput2" placeholder="juan@gmail.com" required { ...register("email")}/>
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <label for="exampleFormControlInput3" className="form-label">Teléfono</label>
           <input type="tel" className="form-control" id="exampleFormControlInput3" placeholder="945287003" required { ...register("phone")}/>
         </div>

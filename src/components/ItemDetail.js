@@ -16,51 +16,23 @@ export default function ItemDetail({product}) {
             <img className="img-rounded col-sm-4" src={product.imagen} alt={product.nombre}/>
             <div className='col-sm-8'>
                 <h1>{product.nombre}</h1>
-                <h3 className='caracteristica'>Características:</h3>
+                <h3 className='caracteristica'>Características</h3>
                 <h4>Modelo:</h4>
                 <p>{product.modelo}</p>
                 <h4>Descripción:</h4>
                 <p>{product.desc}</p>
-                <h4>Uso:</h4>
-                <p>Para cummpleaños</p>
-                <h4># de torta:</h4>
-                <select>
-                    <option>18</option>
-                    <option>20</option>
-                    <option>22</option>
-                    <option>24</option>
-                </select>
-                <h4>Opciones</h4>
-                <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <label className="form-check-label" >
-                        Recojo
-                    </label>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
-                    <label className="form-check-label" >
-                        Delivery
-                    </label>
-                </div>
-                <h4>Opciones de pago</h4>
-                <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" />
-                    <label className="form-check-label" >
-                        Efectivo
-                    </label>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" defaultChecked />
-                    <label className="form-check-label" >
-                        Tarjetas crédito/débito
-                    </label>
-                </div>
-                <ItemCount
+                {   product.precio &&
+                    <>
+                        <h4>Precio:</h4>
+                        <h4>S/{product.precio.toFixed(2)}</h4>
+                    </>
+                }
+                { product.stock === 1 ? <h3>Sin Stock</h3> : <ItemCount
                     onAdd={onAdd}
                     initial={carItem?.count}
                     stock={product.stock}
-                />
+                />}
+                
             </div>
         </div>
     )

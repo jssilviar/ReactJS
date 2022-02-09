@@ -19,7 +19,7 @@ export default function CartItem({item}) {
       if (result.isConfirmed) {
         carrito.removeItem(item.id)
         Swal.fire(
-          'Borrado de su bolsa de compras',
+          'Borrado de tu bolsa de compras',
         )
       }
     })
