@@ -4,10 +4,10 @@ import Swal from 'sweetalert2'
 import { useForm } from 'react-hook-form';
 import { createOrder } from '../firebase';
 
-function alertOK(client) {
+function alertOK(client, orderId) {
   Swal.fire({
     title: `Gracias, ${client}`,
-    text: 'Tu compra fue exitosa',
+    text: `Tu compra fue exitosa. ID de orden: ${orderId}`,
     icon: 'success',
     width: 600,
     padding: '1em',
@@ -40,8 +40,8 @@ export default function Checkout({items}) {
                 items: carrito.items,
                 total: carrito.total.toFixed(2),
             }
-            await createOrder(newOrderData);
-            alertOK(newOrderData.buyer.name);
+            const orderId = await createOrder(newOrderData);
+            alertOK(newOrderData.buyer.name, orderId);
             reset();
             carrito.clear();
         } catch (error) {
