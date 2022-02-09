@@ -30,8 +30,9 @@ export function ItemCount({stock, initial = 1, onAdd}){
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Se añadió el producto a tu bolsa.',
             showConfirmButton: false,
+            title: 'Muy bien',
+            text: 'Se añadió el producto a tu bolsa.',
             timer: 2000
             })
     }
