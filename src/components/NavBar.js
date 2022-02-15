@@ -10,7 +10,7 @@ export default function NavBar() {
         <nav className="navbar navbar-expand-lg navbar-light bg-2 sticky-top">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
-                    <img src="../logoText.png" alt="logo" width="35" height="35" className="d-inline-block align-text-top me-2"/>
+                    <img src="../ladydi_logo.png" alt="logo" width="35" height="35" className="d-inline-block align-text-top me-2"/>
                     Lady Di Cakes
                 </NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,12 +26,6 @@ export default function NavBar() {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/category/cakes">Cakes</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/contactanos">Contáctanos</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/ubicanos">Ubícanos</NavLink>
                         </li>
                         <NavLink to="/cart">
                             <CartWidget numItems={ carrito.length } />

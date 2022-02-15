@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getProductById } from '../firebase';
+import { AlertError } from '../alerts/Alerts';
 import ItemDetail from './ItemDetail'
 import Loading from './Loading';
 
@@ -12,7 +13,7 @@ export default function ItemDetailContainer({productId}) {
                 const product = await getProductById(productId);
                 setProduct(product);
             } catch (error) {
-                console.error(error)
+                AlertError(error);
             }
         }
 

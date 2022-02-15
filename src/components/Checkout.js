@@ -1,31 +1,8 @@
 import React from 'react';
 import { useCart } from '../hooks/userCart';
-import Swal from 'sweetalert2'
 import { useForm } from 'react-hook-form';
 import { createOrder } from '../firebase';
-
-function alertOK(client, orderId) {
-  Swal.fire({
-    title: `Gracias, ${client}`,
-    text: `Tu compra fue exitosa. ID de orden: ${orderId}`,
-    icon: 'success',
-    width: 600,
-    padding: '1em',
-    color: ' #bdb76b',
-    background: 'white',
-  })
-}
-
-function alertError() {
-  Swal.fire({
-    title: 'Error',
-    icon: 'error',
-    width: 600,
-    padding: '1em',
-    color: ' #bdb76b',
-    background: 'white',
-  })
-}
+import { AlertError, AlertOK } from '../alerts/Alerts';
 
 export default function Checkout({items}) {
 
@@ -41,11 +18,11 @@ export default function Checkout({items}) {
                 total: carrito.total.toFixed(2),
             }
             const orderId = await createOrder(newOrderData);
-            alertOK(newOrderData.buyer.name, orderId);
+            AlertOK(newOrderData.buyer.name, orderId);
             reset();
             carrito.clear();
         } catch (error) {
-            alertError();
+            AlertError(error);
         }
     }
 
@@ -58,7 +35,7 @@ export default function Checkout({items}) {
       <form onSubmit={ handleSubmit(sendForm) }>
         <div className="mb-3">
           <label for="exampleFormControlInput1" className="form-label">Nombre</label>
-          <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Juan" required { ...register("name")}/>
+          <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Juan" required { ...register("name")} minLength="4"/>
         </div>
         <div className="mb-3">
           <label for="exampleFormControlInput2" className="form-label">Correo</label>
@@ -66,7 +43,7 @@ export default function Checkout({items}) {
         </div>
         <div className="mb-3">
           <label for="exampleFormControlInput3" className="form-label">Teléfono</label>
-          <input type="tel" className="form-control" id="exampleFormControlInput3" placeholder="945287003" required { ...register("phone")}/>
+          <input type="tel" className="form-control" id="exampleFormControlInput3" placeholder="987654321" required { ...register("phone")} minLength="7" maxLength={9} pattern="[0-9]{9}" title='Ingresa entre 7 a 9 dígitos'/>
         </div>
         <button className='btn btn-warning' >Terminar Compra</button>
       </form>
