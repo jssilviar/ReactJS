@@ -27,7 +27,7 @@ export default function ItemDetail({product}) {
                         <h4>S/{product.precio.toFixed(2)}</h4>
                     </>
                 }
-                { product.stock === 1 ? <h3>Sin Stock</h3> : <ItemCount
+                { product.stock < 2 ? <h3>Sin Stock</h3> : <ItemCount
                     onAdd={onAdd}
                     initial={carItem?.count}
                     stock={product.stock}
