@@ -64,7 +64,11 @@ El proyecto está dividido de la siguiente manera:
 ```
     cd mi-carrito-jesus-sanchez/
 ```
-3. Iniciar la aplicación con npm start
+3. Instalar librerías de node.js listadas en package.json
+```
+    npm install
+```
+4. Iniciar la aplicación con npm start
 ```
     npm start
 ```
